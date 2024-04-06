@@ -14,7 +14,7 @@ pragma solidity ^0.8.18;
  * for proxy.
  */
 
-contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable, ERC20Upgradeable{
+contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable, ERC20Upgradeable {
 
     error BoxV1__YouAreNotTheOwner();
 
