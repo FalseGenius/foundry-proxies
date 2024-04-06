@@ -17,6 +17,7 @@ https://book.getfoundry.sh/
 
 **forge install OpenZeppelin/openzeppelin-contracts-upgradeable**
 **forge install OpenZeppelin/openzeppelin-contracts**
+**forge install Cyfrin/foundry-devops --no-commit**
 
 ### Build
 
