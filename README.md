@@ -13,7 +13,10 @@ Foundry consists of:
 
 https://book.getfoundry.sh/
 
-## Usage
+## Usage - Libraries to Install
+
+**forge install OpenZeppelin/openzeppelin-contracts-upgradeable**
+**forge install OpenZeppelin/openzeppelin-contracts**
 
 ### Build
 
