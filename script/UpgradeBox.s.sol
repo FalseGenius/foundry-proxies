@@ -19,10 +19,14 @@ contract UpgradeBox is Script {
         proxy = upgradeBox(getMostRecentlyDeployed, address(newBox));
     }
 
+    /**
+     * @param proxyAddress The proxyAddress that points to an implementation
+     * @param newBox Address of new implementation that you want the proxy to point to
+     */
     function upgradeBox(address proxyAddress, address newBox) public returns (address) {
         vm.startBroadcast();
         BoxV1 proxy = BoxV1(proxyAddress);
-        
+
         /**
          * @dev Proxy contracts now points to the new address
          */
