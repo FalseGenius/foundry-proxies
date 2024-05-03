@@ -6,21 +6,17 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/U
 import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {ERC20Upgradeable} from "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 
-
-
 /**
  * @notice Proxy contracts do not have constructors.
  * Constructors add storage to implementation. Initializers are esentially constructors
  * for proxy.
  */
-
 contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable, ERC20Upgradeable {
-
     error BoxV1__YouAreNotTheOwner();
 
     uint256 internal number;
 
-        /// @custom:oz-upgrades-unsafe-allow constructor
+    /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
     }

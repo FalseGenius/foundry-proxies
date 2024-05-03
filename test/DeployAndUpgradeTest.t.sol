@@ -8,7 +8,6 @@ import {DeployBox} from "../script/DeployBox.s.sol";
 import {UpgradeBox} from "../script/UpgradeBox.s.sol";
 
 contract DeployAndUpgradeTest is Test {
-
     address public proxy;
 
     DeployBox public deployer;
@@ -20,7 +19,7 @@ contract DeployAndUpgradeTest is Test {
         upgrader = new UpgradeBox();
         proxy = deployer.run();
         deal(alice, 10 ether);
-    }    
+    }
 
     function testUpgrades() public {
         BoxV2 v2 = new BoxV2();
@@ -30,6 +29,4 @@ contract DeployAndUpgradeTest is Test {
         BoxV2(proxy).setNumber(7);
         assertEq(7, BoxV2(proxy).getNumber());
     }
-
-
 }
